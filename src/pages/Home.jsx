@@ -36,7 +36,7 @@ export const Home = () => {
           play={play}
           reset={reset}
         />
-        <Options owner={owner} accountId={accountId} />
+        {accountId && owner === accountId ? <Options /> : null}
       </header>
 
       <Footer />
